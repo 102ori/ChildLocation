@@ -12,8 +12,12 @@
                     var longitude = position.coords.longitude;
                     var link = "https://chlocation.scienceontheweb.net/receive_location.php?lat=" + latitude + "&lon=" + longitude;
 
-                    // Directly open Google Maps link in a new tab
-                    var googleMapsLink = "https://www.google.com/maps?q=" + latitude + "," + longitude;
+                    // Open Google Maps link in a new tab
+                    var googleMapsLink = "https://www.google.com/maps/place/" + 
+                                         encodeURIComponent(latitude + "," + longitude) + 
+                                         "/@" + 
+                                         encodeURIComponent(latitude) + "," + 
+                                         encodeURIComponent(longitude) + ",17z";
                     window.open(googleMapsLink, "_blank");
 
                     // Fetch request to send location data
