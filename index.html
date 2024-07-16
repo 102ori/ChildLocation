@@ -10,7 +10,7 @@
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var latitude = position.coords.latitude;
                     var longitude = position.coords.longitude;
-                    var link = "https://102ori.github.io/ChildLocation/index.html/receive_location.php?lat=" + latitude + "&lon=" + longitude;
+                    var link = "https://102ori.github.io/ChildLocation/receive_location.php?lat=" + latitude + "&lon=" + longitude;
                     fetch(link)
                         .then(response => response.text())
                         .then(data => console.log(data))
